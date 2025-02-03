@@ -1,0 +1,6 @@
+.home-content > div {
+    text-align: center;
+    margin-top: 48px;
+    margin-bottom: 76px;
+    font-size: var(--fs-2);
+}

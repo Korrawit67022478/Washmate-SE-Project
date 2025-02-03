@@ -1,0 +1,109 @@
+h1 {
+    font-size: var(--fs-1);
+    font-weight: 800;
+    color: var(--color-blue-1);
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 63px;
+}
+#login-shop{
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    margin: 0px 64px 256px 64px;
+}
+#left-panel {
+    width: 757px;
+    height: 705px;
+    background-color: #99FFB2;
+    border-radius: 15px 0px 0px 15px;
+    color: #007F20;
+    align-content: center;
+    text-align: center;
+}
+#left-panel > #txt-1 {
+    font-size: var(--fs-2);
+    font-weight: 600;
+    margin-bottom: 34px;
+}
+#left-panel > #txt-2 {
+    font-size: var(--fs-4);
+    font-weight: 400;
+    margin-bottom: 21px;
+}
+#left-panel > a {
+    border: 2px #007F20 solid;
+    border-radius: 15px;
+    width: 224px;
+    height: 61px;
+    background-color: transparent;
+    color: #007F20;
+    font-size: var(--fs-5);
+    font-family: "Prompt", serif;
+    font-weight: 600;
+    align-content: center;
+    justify-self: center;
+    display: block;
+}
+#tab {
+    display: flex;
+    gap: 7px;
+    
+}
+#tab > #tab-user {
+    background-color: var(--color-blue-2);
+    
+}
+#tab > #tab-shop {
+    background-color: var(--color-green-1);
+    
+}
+#tab-shop , #tab-user, #tab a {
+    width: 100%;
+    height: 64px;
+    text-align: center;
+    align-content: center;
+    border-radius: 10px 10px 0px 0px;
+    color: white;
+    font-size: var(--fs-4);
+    font-weight: 600;
+    border: 0px;
+}
+#right-panel {
+    display: flex;
+    flex-direction: column;
+    
+}
+#form-shop {
+    background-color: #CCFFD9;
+    width: 597.23px;
+    height: 705px;
+    border-radius: 0px 0px 15px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+}
+#form-shop > label {
+    font-size: var(--fs-4);
+    color: var(--color-green-2);
+}
+#form-shop > input {
+    width: 459px;
+    height: 43px;
+    border: var(--color-green-2) 1px solid;
+    margin-bottom: 13px;
+    border-radius: 10px;
+}
+#form-shop > a {
+    background-color: var(--color-green-1);
+    height: 55px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    align-content: center;
+}
