@@ -8,10 +8,10 @@
     --color-red-1 : #FF4242;
 
     --fs-1 : 64px;
-    --fs-2 : 40px;
-    --fs-3 : 30px;
-    --fs-4 : 24px;
-    --fs-5 : 16px;
+    --fs-2 : 32px;
+    --fs-3 : 24px;
+    --fs-4 : 16px;
+    --fs-5 : 14px;
 
 }
 body, button, input, textarea, select {
