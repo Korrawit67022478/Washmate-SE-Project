@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>profile</title>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/HF.css">
+    <link rel="stylesheet" href="CSS/profile.css">
+    <link rel="stylesheet" href="CSS/universal-design.css">
+</head>
+<body>
+    <div class="topnav">
+        <div class="topnav-left">
+            <img src="pic/profile.png" alt="Profile">
+            <a href="#">Noname</a>
+        </div>
+        <div class="topnav-right">
+            <a href="#">หน้าแรก</a>
+            <a href="#">เช็คสถานะ</a>
+            <a href="#">ประวัติ</a>
+        </div>
+    </div>
+
+</head>
+<body>
+    <div class="container">
+        <h2>My Profile</h2>
+        <div class="profile-pic">
+            <img id="profileImage" src="default-profile.png" alt="Profile Picture">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <label for="fileInput">✏️</div></label>
+        </div>
+        <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" value="Noname">
+        </div>
+        <div class="form-group">
+            <label>Phone Number</label>
+            <input type="text" value="0999939639">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="email" value="name@gmail.com">
+        </div>
+        <button class="btn-save">Save</button>
+    </div>
+    
+    <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
+</body>
+</html>
