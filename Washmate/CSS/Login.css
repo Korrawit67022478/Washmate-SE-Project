@@ -32,7 +32,7 @@ h1 {
     font-weight: 400;
     margin-bottom: 21px;
 }
-#left-panel > #regis-btn {
+#regis-btn {
     border: 2px white solid;
     border-radius: 15px;
     width: 7em;
@@ -47,20 +47,52 @@ h1 {
     justify-self: center;
     display: block;
 }
+#regis-btn:hover {
+    background-color: hsla(0, 0%, 100%, 15%);
+}
+#regis-btn:active {
+    background-color: hsla(0, 0%, 70%, 35%);
+    transform: scale(0.98);
+}
 #tab {
     display: flex;
     gap: 7px;
     
 }
-#tab > #tab-user {
+#tab-user {
     background-color: var(--color-blue-2);
     padding: 0.5em;
+    transform-origin: bottom;
+    transition: transform 0.1s ease;
+    position: relative;
+    overflow: hidden;
 }
-#tab > #tab-shop {
+#tab-user:hover {
+    background-color: hsl(200, 100%, 55%);
+    transform: scaleY(1.1);
+}
+#tab-user:active {
+    background-color: hsl(200, 100%, 45%);
+    transform: scaleZ(0.98);
+}
+#tab-shop {
     background-color: var(--color-green-1);
     padding: 0.5em;
+    transform-origin: bottom;
+    transition: transform 0.1s ease;
+    position: relative;
+    overflow: hidden;
 }
-#tab-shop , #tab-user, #tab a {
+#tab-shop:hover{
+    background-color: hsl(135, 100%, 40%);
+    transform: translateY(-1em);
+    transform: scaleY(1.1);
+}
+#tab-shop:active {
+    background-color: hsl(135, 100%, 30%);
+    transform: scaleZ(0.98);
+}
+#tab-shop , #tab-user{
     width: 100%;
     height: 1.5em;
     text-align: center;
@@ -99,7 +131,7 @@ h1 {
     border: var(--color-blue-3) 1px solid;
     border-radius: 10px;
 }
-#form > a {
+#submit-btn {
     background-color: var(--color-blue-1);
     height: 1.71875em;
     padding: 0.5em;
@@ -109,4 +141,10 @@ h1 {
     border: 0px;
     border-radius: 10px;
     text-align: center;
+    transition: transform 0.1s ease;
+}
+
+#submit-btn:active {
+    background-color: hsl(211, 100%, 35%);
+    transform: scale(0.98);
 }

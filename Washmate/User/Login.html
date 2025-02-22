@@ -66,7 +66,7 @@
                     formInput[i].style.border = '#003D7F 1px solid'; 
                 }
                 submitBtn.style.backgroundColor = "#007AFF"
-
+                submitBtn.setAttribute("href", "Home.html")
             }
             if (userRole === "shop") {
                 leftPanel.style.backgroundColor = "#99FFB2"
@@ -81,7 +81,7 @@
                     formInput[i].style.border = '#007F20 1px solid'; 
                 }
                 submitBtn.style.backgroundColor = "#00FF40"
-                
+                submitBtn.setAttribute("href", "../Shop/Home-s.html")
             }
         }
 
@@ -92,7 +92,6 @@
             else {
                 userRole = "user";
             }
-            console.log(userRole)
             updateUI();
         });
         tabShop.addEventListener("click", () => {
@@ -102,7 +101,6 @@
             else {
                 userRole = "shop";
             }
-            console.log(userRole)
             updateUI();
         });
         
