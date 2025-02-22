@@ -1,0 +1,30 @@
+.progress-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+}
+.circle {
+    width: 40px;
+    height: 40px;
+    background-color: #d3d3d3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 0 10px;
+}
+.circle.active {
+    background-color: #48b0f7;
+    color: white;
+}
+.line {
+    width: 50px;
+    height: 5px;
+    background-color: #d3d3d3;
+}
+.line.active {
+    background-color: #48b0f7;
+}

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WashMate - Login</title>
+    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="../CSS/universal-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <h1>WashMate</h1>
+
+    <div id="login-user">
+        <div id="left-panel">
+            <div id="txt-1">เข้าสู่ระบบ</div>
+            <div id="txt-2">ท่านยังไม่มีบัญชีใช่หรือไม่?</div>
+            <a id="regis-btn" href="Register-user.html" >ลงทะเบียน</a>
+        </div>
+        <div id="right-panel">
+            <div id="tab">
+                <a href="javascript:void(0)" id="tab-user">ผู้ใช้</a>
+                <a href="javascript:void(0)" id="tab-shop">ร้านซักผ้า</a>
+            </div>
+            <div>
+                <form id="form">
+                    <label class="form-label">Email / Phone</label>
+                    <input class="form-input" type="text">
+                    <label class="form-label">Password</label><input class="form-input" type="password" style="margin-bottom: 5.7em;">
+                    
+                    <a id="submit-btn" href="Home.html">Login</a>
+                </form>
+            </div>
+            
+        </div>
+    </div>
+    <script>
+        const tabUser = document.getElementById("tab-user");
+        const tabShop = document.getElementById("tab-shop");
+
+        const leftPanel = document.getElementById("left-panel");
+        const regisBtn = document.getElementById("regis-btn")
+
+        const form = document.getElementById("form")
+        const formLabel = document.getElementsByClassName("form-label")
+        const formInput = document.getElementsByClassName("form-input")
+        const submitBtn = document.getElementById("submit-btn")
+
+        const body = document.body;
+
+        let userRole = "user";
+        
+        const updateUI = () => {
+            if (userRole === "user") {
+                leftPanel.style.backgroundColor = "#99CAFF"
+                leftPanel.style.color = "white"
+                regisBtn.style.color = "white"
+                regisBtn.style.border = "2px white solid"
+                form.style.backgroundColor = "#CCE5FF"
+                for (let i = 0; i < formLabel.length; i++) {
+                    formLabel[i].style.color = "#003D7F"; 
+                }
+                for (let i = 0; i < formInput.length; i++) {
+                    formInput[i].style.border = '#003D7F 1px solid'; 
+                }
+                submitBtn.style.backgroundColor = "#007AFF"
+                submitBtn.setAttribute("href", "Home.html")
+            }
+            if (userRole === "shop") {
+                leftPanel.style.backgroundColor = "#99FFB2"
+                leftPanel.style.color = "#007F20"
+                regisBtn.style.color = "#007F20"
+                regisBtn.style.border = "2px #007F20 solid"
+                form.style.backgroundColor = "#CCFFD9"
+                for (let i = 0; i < formLabel.length; i++) {
+                    formLabel[i].style.color = "#007F20"; 
+                }
+                for (let i = 0; i < formInput.length; i++) {
+                    formInput[i].style.border = '#007F20 1px solid'; 
+                }
+                submitBtn.style.backgroundColor = "#00FF40"
+                submitBtn.setAttribute("href", "../Shop/Home-s.html")
+            }
+        }
+
+        tabUser.addEventListener("click", () => {
+            if (userRole === "shop"){
+                userRole = "user" ;
+            }
+            else {
+                userRole = "user";
+            }
+            updateUI();
+        });
+        tabShop.addEventListener("click", () => {
+            if (userRole === "user"){
+                userRole = "shop" ;
+            }
+            else {
+                userRole = "shop";
+            }
+            updateUI();
+        });
+        
+
+    </script>
+    
+</body>
+</html>
