@@ -15,7 +15,7 @@
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <a href="#"><img src="../pic/profile.png" alt="Profile"></a>
+            <a href="profile.html"><img src="../pic/profile.png" alt="Profile"></a>
         </div>
         <div>
             <form action="search.html" class="searchbar">
@@ -24,18 +24,37 @@
             </form>
         </div>
         <div class="topnav-right">
-            <a href="#">หน้าแรก</a>
+            <a href="Home.html">หน้าแรก</a>
             <a href="#">เช็คสถานะ</a>
-            <a href="#">ประวัติ</a>
+            <a href="history.html">ประวัติ</a>
         </div>
     </div>
-    
-    <div class="progress-container">
-        <div class="circle active">1</div>
-        <div class="line"></div>
-        <div class="circle">2</div>
-        <div class="line"></div>
-        <div class="circle">3</div>
+    <h1 style="text-align: center;">เช็คสถานะ</h1>
+    <div id="progress-container">
+        <div class="progress-order">
+            <div class="pro-group">
+                <div class="pro-pic">
+                    <img src="../pic/laundry1.png" alt="" class="pro-pic">
+                </div>
+                <div class="pro-info">
+                    <div class="pro-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                    <div class="pro-info-id"><b>รหัสออเดอร์</b>  GF-878</div>
+                </div>
+            </div>
+            <div class="pro-status" id="order-1">ยังไม่เสร็จ</div>
+        </div>
+        <div class="progress-order">
+            <div class="pro-group">
+                <div class="pro-pic">
+                    <img src="../pic/laundry1.png" alt="" class="pro-pic">
+                </div>
+                <div class="pro-info">
+                    <div class="pro-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                    <div class="pro-info-id"><b>รหัสออเดอร์</b>  GF-870</div>
+                </div>
+            </div>
+            <div class="pro-status" id="order-2">เสร็จแล้ว</div>
+        </div>
     </div>
 
     <div class="footer">

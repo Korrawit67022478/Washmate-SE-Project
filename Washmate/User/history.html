@@ -6,8 +6,12 @@
     <title>ค้นหาร้านซักผ้า - WashMate</title>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/HF.css">
-    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/history.css">
     <link rel="stylesheet" href="../CSS/universal-design.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 </head>
 <body>
@@ -15,40 +19,194 @@
     <div class="topnav">
         <div class="topnav-left">
             
-            <a href="#"><img src="pic/profile.png" alt="Profile"></a>
+            <a href="profile.html"><img src="../pic/profile.png" alt="Profile"></a>
+        </div>
+        <div>
+            <form action="search.html" class="searchbar">
+                <input type="text" name="search" placeholder="ค้นหาร้านซักผ้า">
+                <button type="submit"><i class="fa fa-search"></i></button>
+            </form>
         </div>
         <div class="topnav-right">
-            <a href="#">หน้าแรก</a>
-            <a href="#">เช็คสถานะ</a>
+            <a href="Home.html">หน้าแรก</a>
+            <a href="Check-Status.html">เช็คสถานะ</a>
             <a href="#">ประวัติ</a>
         </div>
     </div>
     <!-- //////////////////topnav////////////////////// -->
-
-    <center>
-        <div class="content">
-            <h2>พบ 2 ร้าน</h2>
-            <div class="store">
-                <img src="pic/logo.png" alt="Laundry Bar">
-                <div>
-                    <strong>Laundry Bar หน้าม.</strong>
-                    <p>รหัสออเดอร์  GF-878</p>
+    <h1 style="text-align: center;">History</h1>
+    <div id="history-container">
+        <div class="history-group">
+            <div class="history-item">
+                <div class="history-topic">
+                    <div class="his-pic">
+                        <img src="../pic/laundry1.png" alt="" class="his-pic">
+                    </div>
+                    <div class="his-info">
+                        <div class="his-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                        <div class="his-info-id"><b>รหัสออเดอร์</b>  GF-870</div>
+                    </div>
+                </div>
+                <div class="history-more">
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-blue-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>123 ม.1 ต.แม่กา อ.เมืองพะเยา</span>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                        </svg>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-red-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>Laundry Bar หน้าม.</span>
+                    </div>
+                    <div class="more-info">
+                        <table class="more-info-table">
+                            <tr>
+                                <th>สรุปการบริการ</th>
+                                <th>ราคา</th>
+                            </tr>
+                            <tr>
+                                <td>ซัก อบ รีด น้ำหนัก 5 กก.</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมค่าบริการ</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>ค่าจัดส่ง</td>
+                                <td>40 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมทั้งหมด</td>
+                                <td>120 บาท</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-
-            <div class="store">
-                <img src="pic/logo.png" alt="ร้านซักผ้าร้านหนึ่ง">
-                <div>
-                    <strong>ร้านซักผ้าร้านหนึ่ง</strong>
-                    <p>รหัสออเดอร์ GP-564  </p>
+            <div class="history-item">
+                <div class="history-topic">
+                    <div class="his-pic">
+                        <img src="../pic/laundry1.png" alt="" class="his-pic">
+                    </div>
+                    <div class="his-info">
+                        <div class="his-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                        <div class="his-info-id"><b>รหัสออเดอร์</b>  GF-870</div>
+                    </div>
+                </div>
+                <div class="history-more">
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-blue-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>123 ม.1 ต.แม่กา อ.เมืองพะเยา</span>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                        </svg>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-red-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>Laundry Bar หน้าม.</span>
+                    </div>
+                    <div class="more-info">
+                        <table class="more-info-table">
+                            <tr>
+                                <th>สรุปการบริการ</th>
+                                <th>ราคา</th>
+                            </tr>
+                            <tr>
+                                <td>ซัก อบ รีด น้ำหนัก 5 กก.</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมค่าบริการ</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>ค่าจัดส่ง</td>
+                                <td>40 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมทั้งหมด</td>
+                                <td>120 บาท</td>
+                            </tr>
+                        </table>
+                    </div>
                 </div>
             </div>
-
+            <div class="history-item">
+                <div class="history-topic">
+                    <div class="his-pic">
+                        <img src="../pic/laundry1.png" alt="" class="his-pic">
+                    </div>
+                    <div class="his-info">
+                        <div class="his-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                        <div class="his-info-id"><b>รหัสออเดอร์</b>  GF-870</div>
+                    </div>
+                </div>
+                <div class="history-more">
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-blue-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>123 ม.1 ต.แม่กา อ.เมืองพะเยา</span>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                        </svg>
+                    </div>
+                    <div class="more-info">
+                        <svg style="height: 24px; fill: var(--color-red-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                            <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                        </svg>
+                        <span>Laundry Bar หน้าม.</span>
+                    </div>
+                    <div class="more-info">
+                        <table class="more-info-table">
+                            <tr>
+                                <th>สรุปการบริการ</th>
+                                <th>ราคา</th>
+                            </tr>
+                            <tr>
+                                <td>ซัก อบ รีด น้ำหนัก 5 กก.</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมค่าบริการ</td>
+                                <td>80 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>ค่าจัดส่ง</td>
+                                <td>40 บาท</td>
+                            </tr>
+                            <tr>
+                                <td>รวมทั้งหมด</td>
+                                <td>120 บาท</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
         </div>
-    </center>
+
+
+
+    </div>
     <!-- //////////////////footer////////////////////// -->
     <div class="footer">
-        <img src="pic/logo.png" alt="Logo">
+        <img src="../pic/logo.png" alt="Logo">
         <div class="footer-text">
             <p>WashMate | ติดต่อ: washmate@gmail.com | โทร: +56 **** ****</p>
         </div>

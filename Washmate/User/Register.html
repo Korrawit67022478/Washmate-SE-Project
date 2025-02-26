@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>WashMate - Login</title>
-    <link rel="stylesheet" href="../CSS/Login.css">
+    <link rel="stylesheet" href="../CSS/Register-user.css">
     <link rel="stylesheet" href="../CSS/universal-design.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -13,11 +13,11 @@
 <body>
     <h1>WashMate</h1>
 
-    <div id="login-user">
+    <div id="Regis">
         <div id="left-panel">
-            <div id="txt-1">เข้าสู่ระบบ</div>
-            <div id="txt-2">ท่านยังไม่มีบัญชีใช่หรือไม่?</div>
-            <a id="regis-btn" href="Register.html" >ลงทะเบียน</a>
+            <div id="txt-1">ลงทะเบียนเข้าใช้งาน</div>
+            <div id="txt-2">ท่านมีบัญชีแล้ว?</div>
+            <a id="regis-btn" href="Login.html">เข้าสู่ระบบ</a>
         </div>
         <div id="right-panel">
             <div id="tab">
@@ -26,11 +26,16 @@
             </div>
             <div>
                 <form id="form">
+                    <label class="form-label">Username</label>
+                    <input class="form-input" type="text">
                     <label class="form-label">Email / Phone</label>
                     <input class="form-input" type="text">
-                    <label class="form-label">Password</label><input class="form-input" type="password" style="margin-bottom: 5.7em;">
+                    <label class="form-label">Password</label>
+                    <input class="form-input" type="password">
+                    <label class="form-label">Confirm Password</label>
+                    <input class="form-input" type="password">
                     
-                    <a id="submit-btn" href="Home.html">Login</a>
+                    <a id="submit-btn" href="Login.html">Sign up</a>
                 </form>
             </div>
             
