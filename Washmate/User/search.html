@@ -26,8 +26,8 @@
         </div>
         <div class="topnav-right">
             <a href="Home.html">หน้าแรก</a>
-            <a href="#">เช็คสถานะ</a>
-            <a href="#">ประวัติ</a>
+            <a href="Check-Status.html">เช็คสถานะ</a>
+            <a href="history.html">ประวัติ</a>
         </div>
     </div>
     
@@ -36,27 +36,95 @@
     <div class="container">
         <div class="sidebar">
             <h3>ฟิลเตอร์โดย</h3>
-            <p><input type="checkbox"> ซักอบรีด</p>
-            <p><input type="checkbox"> ซักแห้ง</p>
-            <p><input type="checkbox"> รีดผ้า</p>
+            <div style="display: flex; flex-direction: column;">
+                <p>ประเภทบริการ</p>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>ซักอบรีดผ้า
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>ซักผ้า
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>รีดผ้า
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>อบผ้า
+                </label>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <p>ราคา</p>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>ต่ำกว่า 30 บาท
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>31 - 50 บาท
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>51 - 100 บาท
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>มากกว่า 100 บาท
+                </label>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <p>เปิดทำการ</p>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span> เปิดทำการขณะนี้
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span> 24 ชั่วโมง
+                </label>
+            </div>
+            <div style="display: flex; flex-direction: column;">
+                <p>คิวร้าน</p>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>ว่าง
+                </label>
+                <label class="custom-label">
+                    <input type="checkbox" class="ch-hidden">
+                    <span class="custom-box"></span>ไม่ว่าง
+                </label>
+            </div>
+            
         </div>
         <div class="content">
             <h3>พบ 2 ร้าน</h3>
-            <div class="store">
+            <div style="align-self: flex-end; margin: 12px 48px;">
+                <label for="sort-noti">เรียงจาก</label>
+                <select name="sort" id="sortBy">
+                    <option value="newest">แจ้งเตือน (ล่าสุด)</option>
+                    <option value="oldest">แจ้งเตือน (เก่าสุด)</option>
+                </select>
+            </div>
+            <a class="store" href="orderForm.html">
                 <img src="../pic/laundry1.png" alt="Laundry Bar">
                 <div>
-                    <strong>Laundry Bar หน้าม.</strong>
-                    <p>เปิด 24 ชั่วโมง</p>
-                    <a href="orderform1.html">order</a>
+                    <strong style="font-size: 24px;">Laundry Bar หน้าม.</strong>
+                    <div>เปิดทำการ ทุกวัน</div>
+                    <div>24 ชั่วโมง</div>
+                    <span style="color: #00FF88;" id="Status-State">คิวว่าง</span>
                 </div>
-            </div>
-            <div class="store">
-                <img src="laundry2.jpg" alt="ร้านซักผ้าร้านหนึ่ง">
+            </a>
+            <a class="store" href="orderform2.html">
+                <img src="../pic/laundry1.png" alt="Laundry Bar">
                 <div>
-                    <strong>ร้านซักผ้าร้านหนึ่ง</strong>
-                    <p>เปิดทุกวัน 9:00 - 23:00</p>
+                    <strong style="font-size: 24px;">Laundry Bar หน้าม.</strong>
+                    <div>เปิดทำการ ทุกวัน</div>
+                    <div>24 ชั่วโมง</div>
+                    <span style="color: #00FF88;" id="Status-State">คิวว่าง</span>
                 </div>
-            </div>
+            </a>
         </div>
     </div>
 

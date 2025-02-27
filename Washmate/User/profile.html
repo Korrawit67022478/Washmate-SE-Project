@@ -12,22 +12,21 @@
 <body>
     <div class="topnav">
         <div class="topnav-left">
-            <img src="pic/profile.png" alt="Profile">
-            <a href="#">Noname</a>
+            <a href=""><img src="../pic/profile.png" alt="Profile">Noname</a>
         </div>
         <div class="topnav-right">
-            <a href="#">หน้าแรก</a>
-            <a href="#">เช็คสถานะ</a>
-            <a href="#">ประวัติ</a>
+            <a href="Home.html">หน้าแรก</a>
+            <a href="Check-Status.html">เช็คสถานะ</a>
+            <a href="history.html">ประวัติ</a>
         </div>
     </div>
 
 </head>
 <body>
     <div class="container">
-        <h2>My Profile</h2>
+        <h2 style="text-align: center;">My Profile</h2>
         <div class="profile-pic">
-            <img id="profileImage" src="default-profile.png" alt="Profile Picture">
+            <img id="profileImage" src="../pic/profile.png" alt="Profile Picture">
             <input type="file" id="fileInput" style="display: none;" accept="image/*">
             <label for="fileInput">✏️</div></label>
         </div>
@@ -45,7 +44,12 @@
         </div>
         <button class="btn-save">Save</button>
     </div>
-    
+    <div class="footer">
+        <img src="../pic/logo.png" alt="Logo">
+        <div class="footer-text">
+            <p>WashMate | ติดต่อ: washmate@gmail.com | โทร: +56 **** ****</p>
+        </div>
+    </div>
     <script>
         document.getElementById('fileInput').addEventListener('change', function(event) {
             const file = event.target.files[0];
