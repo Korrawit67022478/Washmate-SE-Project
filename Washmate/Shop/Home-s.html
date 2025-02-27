@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="../CSS/universal-design.css">
     <link rel="stylesheet" href="../CSS/HF-shop.css">
     <link rel="stylesheet" href="../CSS/HF.css">
+    <link rel="stylesheet" href="../CSS/search.css">
+    <link rel="stylesheet" href="../CSS/Noti-shop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,19 +17,56 @@
 <body>
     <div class="topnav-s">
         <div class="topnav-s-left">
-            <a href="#"><img src="../pic/laundry1.png" alt="Profile"><span style="font-weight: 700;">Laundry Bar หน้าม.</span></a>
+            <a href="Profile-shop.html"><img src="../pic/laundry1.png" alt="Profile"><span style="font-weight: 700;">Laundry Bar หน้าม.</span></a>
         </div>
 
-        <div class="topnav-right-s">
+        <div class="topnav-s-right">
             <a href="#">Home</a>
-            <a href="#">Order</a>
+            <a href="Pending-Order-shop.html">Order</a>
             <a href="Notfication-shop.html">แจ้งเตือน</a>
         </div>
     </div>
-    <div class="home-content">
-        <img src="../pic/Welcome.png" alt="welcome page" width="100%">
-        <div>รายการแนะนำ</div>
-        <img src="../pic/Washmate.png" alt="washmate1" width="100%">
+    <div id="home-content">
+        <div>
+            <img src="../pic/Welcome.png" alt="welcome page" width="100%">
+        </div>
+        <div style="text-align: center; font-size: 40px; margin: 14px 0px;">รายการ</div>
+        <div id="actions">
+            <div id="OrderNow">
+                <div style="display: flex; align-items: center; gap: 24px;">
+                    <img src="../pic/image 14.png" alt="laundry1" width="124px" height="112px" style="align-self: center;">
+                    <span id="OrderNumber">ขณะนี้มี 4 รายการ</span>
+                </div>
+                <div style="display: flex; gap: 48px;">
+                    <a href="Pending-Order-shop.html" class="Ac-btn">ไปที่ออเดอร์</a>
+                    <a href="Notfication-shop.html" class="Ac-btn">ไปที่การแจ้งเตือน</a>
+                </div>
+            </div>
+            <div id="ShopStatus">
+                <div style="text-align: center; font-size: 40px; margin: 14px 0px;">สถานะร้าน</div>
+                <div class="content" style="width: 70%; height: 20%; justify-self: center;">
+                    <div class="store">
+                        <img src="../pic/laundry1.png" alt="Laundry Bar">
+                        <div>
+                            <strong style="font-size: 24px;">Laundry Bar หน้าม.</strong>
+                            <div>เปิดทำการ ทุกวัน</div>
+                            <div>24 ชั่วโมง</div>
+                            <span style="color: #00FF88;" id="Status-State">คิวว่าง</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" style="width: 70%; height: 20%; justify-self: center;">
+                    <div>สถานะคิวตอนนี้</div>
+                    <select name="sort" id="sortBy" style="padding-right: 3em;" onchange="UpdateStatusState(this)">
+                        <option value="Free" id="Free">ว่าง</option>
+                        <option value="Busy" id="Busy">ไม่ว่าง</option>
+                    </select>
+                </div>
+                <div style="display: flex; height: 20%; justify-self: center; gap: 48px;">
+                    <a href="Profile-shop.html" class="Ac-btn">ไปที่แก้ไข</a>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div class="footer">
@@ -36,5 +75,24 @@
             <p>WashMate | ติดต่อ: washmate@gmail.com | โทร: +56 **** ****</p>
         </div>
     </div>
+    <script>
+        const sortBy = document.getElementById("sortBy")
+        const free = document.getElementById("Free")
+        const busy = document.getElementById('Busy')
+        const StatusState = document.getElementById('Status-State')
+
+        const UpdateStatusState = (selected) => {
+            let Svalue = selected.value;
+            if (Svalue === 'Free') {
+                StatusState.style.color = '#00FF88'
+                StatusState.textContent = "คิวว่าง"
+            }
+            if (Svalue === 'Busy') {
+                StatusState.style.color = '#FF4242'
+                StatusState.textContent = "คิวไม่ว่าง"
+            }
+        }
+
+    </script>
 </body>
 </html>

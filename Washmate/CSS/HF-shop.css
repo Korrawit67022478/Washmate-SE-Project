@@ -1,5 +1,5 @@
 .topnav-s {
-    background-color: #99FFB2;
+    background-color: #7FFE6E;
     overflow: hidden;
     display: flex;
     justify-content: space-between;
@@ -16,19 +16,60 @@
 .topnav-s a {
     display: flex;
     align-items: center;
-    color: var(--color-black-1);
+    color: black;
     text-decoration: none;
     padding: 14px 16px;
     font-size: 18px;
     font-weight: 500;
 }
 .topnav-s a:hover {
-    background-color: #71bd84;
-    border-radius: 5px;
+    font-weight: 800;
+    background-color: #4d9c4357;
+    border-radius: 10px;
 }
+
 .topnav-s-left img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
     margin-right: 10px;
+}
+.topnav-s-left:hover {
+    background-color: #4d9c4357;
+    border-radius: 10px;
+}
+#home-content{
+    display: flex;
+    flex-direction: column;
+    gap: 66px;
+    margin-bottom: 10em;
+}
+#actions{
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+#OrderNow {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    gap: 48px;
+}
+
+#OrderNumber {
+    font-size: 32px;
+}
+.Ac-btn {
+    background-color: #7FFE6E;
+    color: #000;
+    padding: 24px;
+    border-radius: 10px;
+}
+.Ac-btn:hover {
+    background-color: hsl(113, 69%, 61%);
+}
+.Ac-btn:active {
+    background-color: hsl(113, 49%, 51%);
+    color: white;
 }

@@ -14,7 +14,7 @@
     align-self: flex-end;
     justify-self: end;
 }
-#Noti-1 #sortBy {
+#sortBy {
     border: 2px var(--color-blue-3) solid;
     border-radius: 10px;
     padding: 5px;

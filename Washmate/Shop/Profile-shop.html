@@ -7,11 +7,15 @@
     <link rel="stylesheet" href="../CSS/universal-design.css">
     <link rel="stylesheet" href="../CSS/Profile-shop.css">
     <link rel="stylesheet" href="../CSS/HF.css">
+    <link rel="stylesheet" href="../CSS/HF-shop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/b9c8e19e25.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+
 </head>
 <body>
     <div class="topnav-s">
@@ -19,9 +23,9 @@
             <a href="#"><img src="../pic/laundry1.png" alt="Profile"><span style="font-weight: 700;">Laundry Bar หน้าม.</span></a>
         </div>
         <div class="topnav-s-right">
-            <a href="#">Home</a>
-            <a href="#">Order</a>
-            <a href="#">แจ้งเตือน</a>
+            <a href="Home-s.html">Home</a>
+            <a href="Pending-Order-shop.html">Order</a>
+            <a href="Notfication-shop.html">แจ้งเตือน</a>
         </div>
     </div>
     <div class="shop-profile">
@@ -29,38 +33,34 @@
             <img src="../pic/laundry1.png" alt="logo">
             <a href="#" style="color: #000;">แก้ไข</a>
         </div>
-        <div>
+        <div style="display: flex; flex-direction: column;">
+            <button onclick="editField()"><i class="fa-regular fa-pen-to-square"></i></button>
             <form id="shop-infoform">
                 <div>
                     <label>ชื่อร้าน</label><br>
-                    <input type="text" value="Launry bar หน้ามอ." disabled>
-                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
+                    <input type="text" value="Laundry bar หน้ามอ." disabled>
                 </div>
                 <div>
                     <label>คำอธิบายร้าน</label><br>
                     <input type="text" value="บริการซักอบรีดคุณภาพสูง ด้วยเครื่องซักและน้ำยามาตรฐาน" disabled>
-                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
                 </div>
                 <div>
                     <label>ที่ตั้ง</label><br>
                     <input type="text" value="ไม่รู้จะใส่ยังไงอะ ช่วยด้วย !!!" disabled>
-                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
                 </div>
                 <div>
                     <label>เวลาทำการ</label><br>
                     <input type="text" value="เปิดตลอด 24 ชั่วโมง" disabled>
-                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
                 </div>
                 <div>
                     <label>ช่องทางติดต่อ</label><br>
                     <input type="text" value="โทร. 099-9999999 หรือติดต่อผ่านFacebook LaundryBar หน้า ม.พะเยา ซอย Mr.DIY" disabled>
-                    <button type="submit"><i class="fa-regular fa-pen-to-square"></i></button>
                 </div>
-                <button type="submit" id="save-s">Save</button>
+                <button type="button" onclick="saveAll()" id="save-s">Save</button>
             </form>
         </div>
         <div id="exit">
-            <a href="Home-s.html"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
+            <a href="../Login.html"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
         </div>
 
     </div>
@@ -70,5 +70,31 @@
             <p>WashMate | ติดต่อ: washmate@gmail.com | โทร: +56 **** ****</p>
         </div>
     </div>
+    <script>
+        const editField = () => {
+            let input = document.querySelectorAll("input")
+            input.forEach(input => input.disabled = false)
+            Toastify({
+                text: "คุณสามารถแก้ไขข้อมูลได้แล้ว", // Message
+                duration: 3000, // 3 seconds
+                gravity: "top", // 'top' or 'bottom'
+                position: "center", // 'left', 'center', 'right'
+                backgroundColor: "#E8FE6E",
+                style: { borderRadius: "8px", padding: "10px",color: "black" }
+            }).showToast();
+        }
+        const saveAll = () => {
+            let input = document.querySelectorAll("input")
+            input.forEach(input => input.disabled = true)
+            Toastify({
+                text: "ข้อมูลได้รับการบันทึกแล้ว", // Message
+                duration: 3000, // 3 seconds
+                gravity: "top", // 'top' or 'bottom'
+                position: "center", // 'left', 'center', 'right'
+                backgroundColor: "#4CAF50", // Green success color
+                style: { borderRadius: "8px", padding: "10px" }
+            }).showToast();
+        }
+    </script>
 </body>
 </html>
