@@ -3,14 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WashMate - Order Form3</title>
-    <link href="https://fonts.googleapis.com/css2?family=Prompt:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>WashMate - Order Form</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/HF.css">
     <link rel="stylesheet" href="../CSS/order.css">
     <link rel="stylesheet" href="../CSS/universal-design.css">
-    <style>
-
-    </style>
+    <link rel="stylesheet" href="../CSS/history.css">
+    <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 </head>
 <body>
     <!-- //////////////////topnav////////////////////// -->
@@ -21,8 +23,8 @@
         </div>
         <div class="topnav-right">
             <a href="Home.html">หน้าแรก</a>
-            <a href="#">เช็คสถานะ</a>
-            <a href="#">ประวัติ</a>
+            <a href="Check-Status.html">เช็คสถานะ</a>
+            <a href="history.html">ประวัติ</a>
         </div>
     </div>
     <!-- //////////////////topnav////////////////////// -->
@@ -30,33 +32,112 @@
     <h2 style="text-align: center;">Order Form</h2>
     <div class="container">
         <div class="progress-container">
-            <div class="circle">1</div>
+            <a href="orderForm.html"><div class="circle" id="circle-success"></div></a>
             <div class="line"></div>
-            <div class="circle">2</div>
-            <div class="line"></div>
-            <div class="circle active">3</div>
+            <a href="#"><div class="circle" id="circle-active"></div></a>
         </div>
         
         <div class="container">
-            <h3>ขั้นตอนที่ 3: เลือกการชำระเงินและบริการ</h3>
-            <div class="form-group">
-                <label>Payment</label>
-                <select>
-                    <option>เก็บเงินปลายทาง</option>
-                    <option>Prompt Pay</option>
-                </select>
+            <h3>ขั้นตอนที่ 2 : ชำระค่าบริการ</h3>
+            <div style="display: flex; gap: 128px;">
+                <div style="display: flex; flex-direction: column; justify-items: center;">
+                    <div style="display: flex; gap: 36px; flex-direction: column;">
+                        <div style="display: flex; margin-top: 2.2em;">
+                            <span style="font-size: 24px; width: 96px;"><b>Payment</b></span>
+                            <div style="display: flex; flex-direction: column; gap: 12px; margin-left: 64px; width: 300px;">
+                                <label class="paymentOption">
+                                    <input type="radio" name="payment" class="radio-hidden" id="COD">
+                                    <span class="radio-custom"></span>
+                                    <span class="option-text">เก็บเงินปลายทาง</span>
+                                    <img src="../pic/COD.png" class="option-icon">
+                                </label>
+                                <label class="paymentOption">
+                                    <input type="radio" name="payment" class="radio-hidden" id="PromptPay">
+                                    <span class="radio-custom"></span>
+                                    <span class="option-text">Prompt Pay</span>
+                                    <img src="../pic/PP.png" class="option-icon" >
+                                </label>
+                            </div>
+                        </div>
+                        <div style="display: flex; margin-top: 2.2em;">
+                            <span style="font-size: 24px;width: 96px;"><b>Service</b></span>
+                            <div style="display: flex; flex-direction: row; margin-left: 64px; width: 300px;">
+                                <select id="service-option">
+                                    <option value="Washing">ซักผ้า</option>
+                                    <option value="Ironing">รีดผ้า</option>
+                                    <option value="Streaming">อบผ้า</option>
+                                    <option value="Full-Service">ซักอบรีดผ้า</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="button-group" style="align-self: flex-start; margin-top: 9.6em;">
+                                <a href="orderForm.html"><button class="btn btn-red">ยกเลิก</button></a>
+                                <a href="" id="submitBtn"><button class="btn btn-green" >ถัดไป</button></a>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                        <div>
+                            <div>
+                                <div>
+                                    <div class="history-topic">
+                                        <div class="his-pic">
+                                            <img src="../pic/laundry1.png" alt="" class="his-pic">
+                                        </div>
+                                        <div class="his-info">
+                                            <div class="his-info-name"><b>Laundry Bar หน้า ม.</b></div>
+                                            <div class="his-info-id"><b>รหัสออเดอร์</b>  GF-870</div>
+                                        </div>
+                                    </div>
+                                    <div class="history-more">
+                                        <div class="more-info">
+                                            <svg style="height: 24px; fill: var(--color-blue-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                            </svg>
+                                            <span>123 ม.1 ต.แม่กา อ.เมืองพะเยา</span>
+                                        </div>
+                                        <div class="more-info">
+                                            <svg style="height: 24px; " xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path d="M169.4 470.6c12.5 12.5 32.8 12.5 45.3 0l160-160c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0L224 370.8 224 64c0-17.7-14.3-32-32-32s-32 14.3-32 32l0 306.7L54.6 265.4c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3l160 160z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="more-info">
+                                            <svg style="height: 24px; fill: var(--color-red-1);" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                                <path d="M215.7 499.2C267 435 384 279.4 384 192C384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2c12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/>
+                                            </svg>
+                                            <span>Laundry Bar หน้าม.</span>
+                                        </div>
+                                        <div class="more-info">
+                                            <table class="more-info-table">
+                                                <tr>
+                                                    <th>สรุปการบริการ</th>
+                                                    <th>ราคา</th>
+                                                </tr>
+                                                <tr>
+                                                    <td>ซัก อบ รีด น้ำหนัก 5 กก.</td>
+                                                    <td>80 บาท</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>รวมค่าบริการ</td>
+                                                    <td>80 บาท</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>ค่าจัดส่ง</td>
+                                                    <td>40 บาท</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>รวมทั้งหมด</td>
+                                                    <td>120 บาท</td>
+                                                </tr>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
             </div>
-            <div class="form-group">
-                <label>Service</label>
-                <select>
-                    <option>ซักผ้า</option>
-                    <option>รีดผ้า</option>
-                </select>
-            </div>
-            <div class="button-group">
-                <a href="orderform2.html"><button class="btn btn-red">ย้อนกลับ</button></a>
-                <a href="orderform4.html"><button class="btn btn-green">ถัดไป</button></a>
-            </div>
+
         </div>
     </div>
     <!-- //////////////////footer////////////////////// -->
@@ -67,5 +148,52 @@
         </div>
     </div>
     <!-- //////////////////footer////////////////////// -->
+     <script>
+        document.addEventListener("DOMContentLoaded", () => {
+    const paymentRadios = document.querySelectorAll("input[name='payment']");
+    
+
+    function getSelectedPayment() {
+        const selected = document.querySelector("input[name='payment']:checked");
+        return selected ? selected.id : null;
+    }
+    function decidePaymentPath(ops) {
+        let OrderPath = document.getElementById("submitBtn")
+        if (ops === "COD") {
+            OrderPath.setAttribute("href", "orderForm-4.html")
+        }
+        if (ops === "PromptPay"){
+            OrderPath.setAttribute("href", "orderForm-3.html")
+        }
+    }
+
+    paymentRadios.forEach(radio => {
+        radio.addEventListener("change", () => {
+            console.log("Selected Payment:", getSelectedPayment());
+        });
+    });
+    submitBtn.addEventListener("click", (event) => {
+        if (getSelectedPayment() == null){
+            event.preventDefault();
+            Toastify({
+                text: "คุณยังไม่สามารถไปต่อได้จนกว่าจะทำรายการเสร็จสิ้น", // Message
+                duration: 3000, // 3 seconds
+                gravity: "top", // 'top' or 'bottom'
+                position: "center", // 'left', 'center', 'right'
+                backgroundColor: "#FF4242",
+                style: { borderRadius: "8px", padding: "10px",color: "black" }
+        }).showToast();
+        }
+        
+    });
+
+    // Example: Get selected payment on button click
+    document.getElementById("submitBtn").addEventListener("click", () => {
+        // alert("Selected Payment: " + getSelectedPayment());
+        decidePaymentPath(getSelectedPayment());
+    });
+});
+
+     </script>
 </body>
 </html>
