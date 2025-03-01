@@ -3,6 +3,7 @@
 }
 .sidebar {
     width: 20%;
+
     padding: 30px;
     border-right: 3px #00C3FF solid;
 }
@@ -28,6 +29,7 @@
     border: 2px var(--color-blue-3) solid;
     border-radius: 10px;
     padding: 5px;
+    width: fit-content;
 }
 .content {
     display: flex;
