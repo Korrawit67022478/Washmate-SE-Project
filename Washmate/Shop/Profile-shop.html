@@ -30,8 +30,9 @@
     </div>
     <div class="shop-profile">
         <div id="shop-logo">
-            <img src="../pic/laundry1.png" alt="logo">
-            <a href="#" style="color: #000;">แก้ไข</a>
+            <img src="../pic/laundry1.png" alt="logo" width="200px" id="profileImage">
+            <input type="file" id="fileInput" style="display: none;" accept="image/*">
+            <label for="fileInput"><ins>แก้ไข</ins></label>
         </div>
         <div style="display: flex; flex-direction: column;">
             <button onclick="editField()"><i class="fa-regular fa-pen-to-square"></i></button>
@@ -46,7 +47,7 @@
                 </div>
                 <div>
                     <label>ที่ตั้ง</label><br>
-                    <input type="text" value="ไม่รู้จะใส่ยังไงอะ ช่วยด้วย !!!" disabled>
+                    <input type="text" value="89 หมู่ 16 เมือง พะเยา 56000" disabled>
                 </div>
                 <div>
                     <label>เวลาทำการ</label><br>
@@ -60,7 +61,7 @@
             </form>
         </div>
         <div id="exit">
-            <a href="../Login.html"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
+            <a href="../Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
         </div>
 
     </div>
@@ -71,6 +72,25 @@
         </div>
     </div>
     <script>
+        document.getElementById('fileInput').addEventListener('change', function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    document.getElementById('profileImage').src = e.target.result;
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+        document.addEventListener("DOMContentLoaded", function () {
+            const logoutBtn = document.getElementById("logoutBtn");
+
+            logoutBtn.onclick = function () {
+                localStorage.removeItem("loggedIn");
+                window.location.href = "login.html";
+            };
+        });
+
         const editField = () => {
             let input = document.querySelectorAll("input")
             input.forEach(input => input.disabled = false)

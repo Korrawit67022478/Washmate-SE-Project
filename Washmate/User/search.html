@@ -11,12 +11,16 @@
     <link rel="stylesheet" href="../CSS/search.css">
     <link rel="stylesheet" href="../CSS/universal-design.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="../JS/handleLogin.js"></script>
 </head>
 <body>
     <!-- //////////////////topnav////////////////////// -->
     <div class="topnav">
         <div class="topnav-left">
-            <a href="profile.html"><img src="../pic/profile.png" alt="Profile"></a>
+            <button id="authButton">
+                <img src="../pic/profile.png" alt="profileUser" id="userImage">
+                <span id="authText">Login</span>
+            </button>
         </div>
         <div>
             <form action="search.html" class="searchbar">
