@@ -1,0 +1,161 @@
+h1 {
+    font-size: var(--fs-1);
+    font-weight: 800;
+    color: black;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 63px;
+}
+#login-admin{
+    align-items: flex-end;
+    justify-content: center;
+    display: flex;
+    margin: 0px 64px 256px 64px;
+}
+#login-panel {
+    display: flex;
+    flex-direction: column;
+}
+#form {
+    background-color: hsl(211, 0%, 90%);
+    width: 18.6634em;
+    height: 22.03125em;
+    border-radius: 15px;
+    padding: 0 3em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: center;
+    justify-content: center;
+}
+.form-label {
+    font-size: var(--fs-4);
+    color: hsl(211, 0%, 25%);
+}
+.form-input {
+    width: 100%;
+    height: 2em;
+    padding-left: 6px;
+    margin-bottom: 2.5em;
+    border: hsl(211, 0%, 25%) 1px solid;
+    border-radius: 10px;
+}
+#submit-btn {
+    background-color: hsl(211, 0%, 50%);
+    height: 1.71875em;
+    padding: 0.5em;
+    color: white;
+    font-size: 16px;
+    font-weight: 500;
+    border: 0px;
+    border-radius: 10px;
+    text-align: center;
+    transition: transform 0.1s ease;
+}
+#submit-btn:hover {
+    background-color: hsl(211, 0%, 45%);
+}
+#submit-btn:active {
+    background-color: hsl(211, 0%, 35%);
+    transform: scale(0.98);
+}
+
+
+#container {
+    display: flex;
+}
+#sidebar {
+    background-color: #6C6C6C;
+    height: 100vh;
+}
+#adminPro {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    width: 8em;
+}
+#Name {
+    color: white;
+    font-size: var(--fs-3);
+    font-weight: 600;
+}
+#LogoutBtn {
+    color: #FF0000;
+}
+#nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center;
+    
+}
+#nav > a {
+    width: 8em;
+    padding: 1em 2em;
+    color: white;
+    border: #555 solid 1px;
+}
+#nav > a:hover {
+    background-color: #4B4B4B;
+}
+
+#ManageContainer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+}
+#head {
+    margin: 8em 2em 1em;
+}
+#tableContainer {
+    overflow-y: auto;
+    max-height: 60vh;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+tr {
+    height: 64px
+}
+
+th, td {
+    border-bottom: 1px solid #ddd;
+    padding: 12px;
+}
+
+th {
+    background-color: #f8f8f8;
+    font-weight: bold;
+}
+
+td {
+    background-color: #fff;
+}
+
+input[type="checkbox"] {
+    width: 16px;
+    height: 16px;
+}
+
+.icon {
+    cursor: pointer;
+    margin-right: 8px;
+    color: #555;
+}
+
+.icon:hover {
+    color: #000;
+}
+
+.edit-icon {
+    color: #007bff;
+}
+
+.delete-icon {
+    color: #dc3545;
+}
