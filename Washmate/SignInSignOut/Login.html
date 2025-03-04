@@ -17,7 +17,7 @@
         <div id="left-panel">
             <div id="txt-1">เข้าสู่ระบบ</div>
             <div id="txt-2">ท่านยังไม่มีบัญชีใช่หรือไม่?</div>
-            <a id="regis-btn" href="Register-user.html" >ลงทะเบียน</a>
+            <a id="regis-btn" href="Register.html" >ลงทะเบียน</a>
         </div>
         <div id="right-panel">
             <div id="tab">
@@ -30,7 +30,7 @@
                     <input class="form-input" type="text">
                     <label class="form-label">Password</label><input class="form-input" type="password" style="margin-bottom: 5.7em;">
                     
-                    <a id="submit-btn" href="Home.html">Login</a>
+                    <a id="submit-btn" href="../User/Home.html">Login</a>
                 </form>
             </div>
             
@@ -47,6 +47,7 @@
         const formLabel = document.getElementsByClassName("form-label")
         const formInput = document.getElementsByClassName("form-input")
         const submitBtn = document.getElementById("submit-btn")
+        const LoginBtn = document.getElementById("submit-btn");
 
         const body = document.body;
 
@@ -66,7 +67,7 @@
                     formInput[i].style.border = '#003D7F 1px solid'; 
                 }
                 submitBtn.style.backgroundColor = "#007AFF"
-                submitBtn.setAttribute("href", "Home.html")
+                submitBtn.setAttribute("href", "../User/Home.html")
             }
             if (userRole === "shop") {
                 leftPanel.style.backgroundColor = "#99FFB2"
@@ -84,7 +85,10 @@
                 submitBtn.setAttribute("href", "../Shop/Home-s.html")
             }
         }
-
+        const handleLogin = () => {
+            localStorage.setItem("loggedIn", "true");
+            window.location.href = "../user/Home.html";
+        }
         tabUser.addEventListener("click", () => {
             if (userRole === "shop"){
                 userRole = "user" ;
@@ -103,7 +107,7 @@
             }
             updateUI();
         });
-        
+        LoginBtn.addEventListener("click", handleLogin)
 
     </script>
     

@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WashMate - Shop profile</title>
+    <title>WashMate - Profile</title>
     <link rel="stylesheet" href="../CSS/universal-design.css">
-    <link rel="stylesheet" href="../CSS/Profile-shop.css">
+    <link rel="stylesheet" href="../CSS/profile.css">
     <link rel="stylesheet" href="../CSS/HF.css">
-    <link rel="stylesheet" href="../CSS/HF-shop.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -15,61 +14,48 @@
     <script src="https://kit.fontawesome.com/b9c8e19e25.js" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
-
+    <script src="../JS/handleLogin.js"></script>
 </head>
 <body>
-    <div class="topnav-s">
-        <div class="topnav-s-left">
-            <a href="#"><img src="../pic/laundry1.png" alt="Profile"><span style="font-weight: 700;">Laundry Bar หน้าม.</span></a>
+    <div class="topnav">
+        <div class="topnav-left">
+            <button id="authButton">
+                <img src="../pic/profile.png" alt="profileUser" id="userImage">
+                <span id="authText">Login</span>
+            </button>
         </div>
-        <div class="topnav-s-right">
-            <a href="Home-s.html">Home</a>
-            <a href="Pending-Order-shop.html">Order</a>
-            <a href="Notfication-shop.html">แจ้งเตือน</a>
+        <div class="topnav-right">
+            <a href="Home.html">หน้าแรก</a>
+            <a href="Check-Status.html">เช็คสถานะ</a>
+            <a href="history.html">ประวัติ</a>
         </div>
     </div>
-    <div class="shop-profile">
-        <div id="shop-logo">
-            <img src="../pic/laundry1.png" alt="logo" width="200px" id="profileImage">
+    <div class="user-profile">
+        <div id="user-logo">
+            <img src="../pic/profile.png" alt="logo" width="200px" id="profileImage">
             <input type="file" id="fileInput" style="display: none;" accept="image/*">
             <label for="fileInput"><ins>แก้ไข</ins></label>
         </div>
         <div style="display: flex; flex-direction: column;">
-            <button onclick="editField()"><i class="fa-regular fa-pen-to-square"></i></button>
-            <form id="shop-infoform">
+            <button onclick="editField()" id="editBtn"><i class="fa-regular fa-pen-to-square"></i></button>
+            <form id="user-infoform">
                 <div>
-                    <label>ชื่อร้าน</label><br>
-                    <input type="text" value="Laundry bar หน้ามอ." disabled>
-                </div>
-                <div>
-                    <label>คำอธิบายร้าน</label><br>
-                    <input type="text" value="บริการซักอบรีดคุณภาพสูง ด้วยเครื่องซักและน้ำยามาตรฐาน" disabled>
-                </div>
-                <div>
-                    <label>ที่ตั้ง</label><br>
-                    <input type="text" value="89 หมู่ 16 เมือง พะเยา 56000" disabled>
-                </div>
-                <div>
-                    <label>เวลาทำการ</label><br>
-                    <input type="text" value="เปิดตลอด 24 ชั่วโมง" disabled>
-                </div>
-                <div>
-                    <label>ช่องทางติดต่อ</label><br>
-                    <input type="text" value="โทร. 099-9999999 หรือติดต่อผ่านFacebook LaundryBar หน้า ม.พะเยา ซอย Mr.DIY" disabled>
+                    <label>Username</label><br>
+                    <input type="text" value="noname" disabled>
                 </div>
                 <div>
                     <label>Email / Phone</label><br>
-                    <input type="text" value="LaundryBar11@gmail.com" disabled>
+                    <input type="text" value="noname12@gmail.com" disabled>
                 </div>
                 <div>
                     <label>Password</label><br>
                     <input type="password" value="Pasword123456789" id="password" disabled>
                 </div>
-                <button type="button" onclick="saveAll()" id="save-s">Save</button>
+                <button type="button" onclick="saveAll()" id="save">Save</button>
             </form>
         </div>
         <div id="exit">
-            <a href="../SignInSignOut/Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
+            <a href="../SignInSignOut/Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log out</a>
         </div>
 
     </div>
@@ -123,6 +109,7 @@
                 style: { borderRadius: "8px", padding: "10px" }
             }).showToast();
         }
+        
     </script>
 </body>
 </html>

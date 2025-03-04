@@ -1,0 +1,87 @@
+#PendingOrder {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    margin: 64px 256px;
+}
+#POhead {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+#POhead > div {
+    align-self: flex-end;
+    justify-self: end;
+}
+#POhead #sortBy {
+    border: 2px var(--color-blue-3) solid;
+    border-radius: 10px;
+    padding: 5px;
+}
+#POItem {
+    display: flex;
+    flex-direction: column;
+    overflow-x: hidden;
+    max-height: 35em;
+}
+#POItem .PO {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border: 2px #99FFB2 solid;
+    border-radius: 10px;
+    width: 100%;
+    margin: 12px 0px;
+    padding: 16px 0px;
+    gap: 24px;
+}
+.POinfo {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    line-height: 0.9em;
+    overflow: hidden;
+    max-height: 8em;
+    transition: max-height 0.9s ease-in-out 1s;
+}
+.POinfo:hover {
+    max-height: 50em;
+}
+.POinter {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.takeOrder-btn {
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    border: 0;
+    border-radius: 10px;
+    margin-right: 24px;
+    padding: 12px 24px;
+    gap: 20px;
+}
+
+#RecvOrder {
+    background-color: #7FFE6E;
+}
+#RecvOrder:hover {
+    background-color: hsl(113, 99%, 65%);
+}
+#POItem .PO p:last-child {
+    padding-bottom: 20px;
+}
+#POItem .PO h2, p {
+    margin: 0;
+    padding: 10px 0px 0px 10px;
+}
+#OpenMap {
+    background-color: #E8FE6E;
+    color: black;
+    font-size: 14px;
+}
+#OpenMap:hover {
+    background-color: hsl(69, 99%, 65%);
+}

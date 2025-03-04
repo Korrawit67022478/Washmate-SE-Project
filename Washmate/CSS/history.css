@@ -1,0 +1,55 @@
+#history-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 128px 0;
+}
+.history-group {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 70%;
+}
+.history-item {
+    clip-path: inset(0 round 10px);
+    max-height: 10em;
+    transition: max-height 0.9s ease-in-out;
+}
+.history-item:hover {
+    max-height: 100em;
+}
+
+.history-topic {
+    display: flex;
+    align-items: center;
+    gap: 36px;
+    clip-path: inset(0 round 10px);
+    width: 100%;
+    padding: 36px 24px;
+    margin-bottom: 26px;
+    background-color: #B3EBFF;
+}
+.history-more {
+    clip-path: inset(0 round 10px);
+}
+.his-pic {
+    width: 72px;
+}
+.his-info-name {
+    font-size: 20px;
+}
+.his-info-id {
+    font-size: 16px;
+}
+.more-info {
+    margin-top: 12px;
+    margin-bottom: 12px;
+    gap: 12px   ;
+    display: flex;
+
+}
+.more-info-table, th, td {
+    padding: 4px;
+}
+
