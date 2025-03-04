@@ -25,6 +25,10 @@ body {
     font-size: 18px;
     font-weight: 500;
 }
+.topnav a:hover {
+    background-color: #0f5eb2;
+    border-radius: 10px;
+}
 
 #userImage{
     display: none;

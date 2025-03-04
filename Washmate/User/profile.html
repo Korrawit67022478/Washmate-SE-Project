@@ -41,12 +41,11 @@
             <form id="user-infoform">
                 <div>
                     <label>Username</label><br>
-                    <input type="text" value="Ishimuta" disabled>
+                    <input type="text" value="noname" disabled>
                 </div>
-
                 <div>
                     <label>Email / Phone</label><br>
-                    <input type="text" value="washmate@gmail.com" disabled>
+                    <input type="text" value="noname12@gmail.com" disabled>
                 </div>
                 <div>
                     <label>Password</label><br>
@@ -56,7 +55,7 @@
             </form>
         </div>
         <div id="exit">
-            <a href="../Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log out</a>
+            <a href="../SignInSignOut/Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log out</a>
         </div>
 
     </div>
@@ -82,7 +81,7 @@
 
             logoutBtn.onclick = function () {
                 localStorage.removeItem("loggedIn");
-                window.location.href = "login.html";
+                window.location.href = "../SignInSignOut/Login.html";
             };
         });
 

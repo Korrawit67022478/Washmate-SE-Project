@@ -57,11 +57,19 @@
                     <label>ช่องทางติดต่อ</label><br>
                     <input type="text" value="โทร. 099-9999999 หรือติดต่อผ่านFacebook LaundryBar หน้า ม.พะเยา ซอย Mr.DIY" disabled>
                 </div>
+                <div>
+                    <label>Email / Phone</label><br>
+                    <input type="text" value="LaundryBar11@gmail.com" disabled>
+                </div>
+                <div>
+                    <label>Password</label><br>
+                    <input type="password" value="Pasword123456789" id="password" disabled>
+                </div>
                 <button type="button" onclick="saveAll()" id="save-s">Save</button>
             </form>
         </div>
         <div id="exit">
-            <a href="../Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
+            <a href="../SignInSignOut/Login.html" id="logoutBtn"><i class="fa-solid fa-arrow-right-to-bracket" style="margin-right: 12px;"></i>Log Out</a>
         </div>
 
     </div>
@@ -87,7 +95,7 @@
 
             logoutBtn.onclick = function () {
                 localStorage.removeItem("loggedIn");
-                window.location.href = "login.html";
+                window.location.href = "../SignInSignOut/Login.html";
             };
         });
 

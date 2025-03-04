@@ -15,7 +15,7 @@ function updateAuthButton() {
         authButton.style.color = "white"
 
         authButton.onclick = function () {
-            window.location.href = "profile.html";
+            window.location.href = "../User/profile.html";
         };
         authButton.onmouseover = function() {
             authButton.style.backgroundColor = "#0056b3";
@@ -30,7 +30,7 @@ function updateAuthButton() {
     } else {
         authButton.textContent = "Login";
         authButton.onclick = function () {
-            window.location.href = "../login.html";
+            window.location.href = "../SignInSignOut/Login.html";
         };
     }
 }
